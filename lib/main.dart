@@ -4,7 +4,6 @@ void main() {
   runApp(Myweb());
 }
 
-
 //สร้าง widget
 class Myweb extends StatelessWidget {
   @override
@@ -15,7 +14,9 @@ class Myweb extends StatelessWidget {
         appBar: AppBar(
           title: Text("CHUBEAM"),
         ),
-        body: Text("ยินดีต้อนรับ"),
+        body: Center(
+          child: Text("ยินดีต้อนรับ"),
+        ),
       ),
       theme: ThemeData(primarySwatch: Colors.pink),
     );
