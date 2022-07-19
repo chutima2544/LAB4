@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  var app = MaterialApp(
-    title: "My app",
-    home: Scaffold(
-      appBar: AppBar(
-        title: Text("CHUBEAM"),
+  runApp(Myweb());
+}
+
+
+//สร้าง widget
+class Myweb extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "My Web",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("CHUBEAM"),
+        ),
+        body: Text("ยินดีต้อนรับ"),
       ),
-      body: Text("ยินดีต้อนรับ"),
-    ),
-    theme: ThemeData(primarySwatch: Colors.pink),
-  );
-  runApp(app);
+      theme: ThemeData(primarySwatch: Colors.pink),
+    );
+  }
 }
