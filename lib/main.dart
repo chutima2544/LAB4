@@ -7,6 +7,7 @@ void main() {
       appBar: AppBar(
         title: Text("CHUBEAM"),
       ),
+      body: Text("ยินดีต้อนรับ"),
     ),
   );
   runApp(app);
