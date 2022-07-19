@@ -9,6 +9,7 @@ void main() {
       ),
       body: Text("ยินดีต้อนรับ"),
     ),
+    theme: ThemeData(primarySwatch: Colors.pink),
   );
   runApp(app);
 }
