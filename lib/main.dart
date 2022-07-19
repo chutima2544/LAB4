@@ -15,12 +15,16 @@ class Myweb extends StatelessWidget {
           title: Text("CHUBEAM"),
         ),
         body: Center(
-          child: Text(
-            "ยินดีต้อนรับ",
-            style: TextStyle(fontSize: 30, color: Colors.blue),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text("ยินดีต้อนรับ"),
+              Text("หน้าหลัก"),
+              Text("เนื้อหา"),
+            ],
+          )
           ),
         ),
-      ),
       theme: ThemeData(primarySwatch: Colors.pink),
     );
   }
