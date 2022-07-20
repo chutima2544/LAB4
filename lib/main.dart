@@ -10,7 +10,7 @@ class Myweb extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "My Web",
-      home: MyHomePage,
+      home: MyHomePage(),
       theme: ThemeData(primarySwatch: Colors.pink),
     );
   }
@@ -22,22 +22,30 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int number = 0; //การสร้าง state
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("CHUBEAM"),
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("ยินดีต้อนรับ"),
-              Text("หน้าหลัก"),
-              Text("เนื้อหา"),
-            ],
-          );
+      appBar: AppBar(
+        title: Text("โปรแกรมนับเลย"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("กดปุ่มเพิ่มจำนวนตัวเลข"),
+            Text(
+              "$number",
+              style: TextStyle(fontSize: 60),
+            ),
+          ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
+    );
   }
 }
