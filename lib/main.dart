@@ -23,30 +23,29 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  //กลุ่มข้อมูล
-  List<FoodMenu> menu=[
-    FoodMenu("ข้าวผัด", "50","assets/images/pic1.jpg"),
-    FoodMenu("ผัดไทย", "50","assets/images/pic2.jpg"),
-    FoodMenu("โกโก้", "50","assets/images/pic3.jpg"),
-    FoodMenu("ชานมไข่มุก", "50","assets/images/pic4.jpg")
-  ];
   //แสดงผลข้อมูล
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("รายการอาหารและเครื่องดื่ม"),
+          title: Text("บัญชีของฉัน"),
         ),
-        body: ListView.builder(
-          itemCount: menu.length,
-          itemBuilder: (BuildContext context, int index) {
-            FoodMenu food=menu[index];
-          return ListTile(
-            leading: Image.asset(food.img),
-            title: Text(food.name,style: TextStyle(fontSize: 25),),
-            subtitle: Text("ราคา "+food.price+" บาท"),
-          );
-        })
-      );
+        body: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            ),
+            Container(
+              decoration: BoxDecoration(color: Colors.yellow,borderRadius: BorderRadius.circular(10)),
+              height: 100,
+            )
+          ],
+        ));
   }
 }
