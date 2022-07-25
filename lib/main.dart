@@ -30,22 +30,38 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           title: Text("บัญชีของฉัน"),
         ),
-        body: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  color: Colors.blue, borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            ),
-            Container(
-              decoration: BoxDecoration(color: Colors.yellow,borderRadius: BorderRadius.circular(10)),
-              height: 100,
-            )
-          ],
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                    color: Colors.blue, 
+                    borderRadius: BorderRadius.circular(10)
+                    ),
+                height: 100,
+                child: Row(
+                  children: [
+                    Text("ยอดคงเหลือ"),
+                    Text("2000")
+                  ],
+                ),
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.green, 
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+              ),
+              Container(
+                decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    borderRadius: BorderRadius.circular(10)),
+                height: 100,
+              )
+            ],
+          ),
         ));
   }
 }
