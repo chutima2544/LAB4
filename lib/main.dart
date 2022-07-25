@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'FoodMenu.dart';
+import 'MoneyBox.dart';
 
 void main() {
   runApp(Myweb());
@@ -28,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน",
+          title: Text("เครื่องเขียนหรรษา",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
@@ -36,90 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "ยอดคงเหลือ",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text("2000",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.right,
-                          ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "รายรับ",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text("10000",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.right,
-                          ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(8.0),
-                decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(10)),
-                height: 100,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      "รายจ่าย",
-                      style: TextStyle(
-                          fontSize: 25,
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Expanded(
-                      child: Text("7000",
-                          style: TextStyle(
-                              fontSize: 25,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                          textAlign: TextAlign.right,
-                          ),
-                    )
-                  ],
-                ),
-              ),
+              MoneyBox("ดินสอ", 20, Colors.blue, 100),
+              SizedBox(height: 10,),
+              MoneyBox("ปากกา", 30, Colors.green, 100),
+              SizedBox(height: 10,),
+              MoneyBox("ยางลบ", 10, Colors.red, 100),
+              SizedBox(height: 10,),
+              MoneyBox("สมุด", 15, Colors.purple, 100),
+              SizedBox(height: 10,),
+              MoneyBox("สมุดระบายสี", 20, Colors.purple, 100),
+              SizedBox(height: 10,),
+              MoneyBox("กบเหลา", 15, Colors.blue, 100),
             ],
           ),
         ));
