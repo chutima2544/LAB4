@@ -28,7 +28,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("บัญชีของฉัน"),
+          title: Text("บัญชีของฉัน",
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         ),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -37,29 +39,87 @@ class _MyHomePageState extends State<MyHomePage> {
               Container(
                 padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.blue, 
-                    borderRadius: BorderRadius.circular(10)
-                    ),
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.circular(10)),
                 height: 100,
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("ยอดคงเหลือ"),
-                    Text("2000")
+                    Text(
+                      "ยอดคงเหลือ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text("2000",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right,
+                          ),
+                    )
                   ],
                 ),
               ),
               Container(
+                padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.green, 
+                    color: Colors.green,
                     borderRadius: BorderRadius.circular(10)),
                 height: 100,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "รายรับ",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text("10000",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right,
+                          ),
+                    )
+                  ],
+                ),
               ),
               Container(
+                padding: const EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                    color: Colors.yellow,
+                    color: Colors.red,
                     borderRadius: BorderRadius.circular(10)),
                 height: 100,
-              )
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Text(
+                      "รายจ่าย",
+                      style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(
+                      child: Text("7000",
+                          style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold),
+                          textAlign: TextAlign.right,
+                          ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ));
